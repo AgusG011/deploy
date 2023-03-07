@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../LandingPage/LandingPage.css";
-import image from "../../assets/img/uwu.svg";
-import image2 from "../../assets/img/logo.jpg";
+import image from "../assets/img/uwu.svg";
+import image2 from "../assets/img/logo.jpg";
 
 export default function LandingPage() {
   return (

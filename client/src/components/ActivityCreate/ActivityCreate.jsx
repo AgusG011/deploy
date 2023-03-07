@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { postActivities, getCountries } from "../../Redux/action";
 import { useDispatch, useSelector } from "react-redux";
 import "./ActivityCreate.css";
@@ -7,7 +7,7 @@ import "./ActivityCreate.css";
 export default function ActivityCreate() {
   const dispatch = useDispatch();
   const Countries = useSelector((state) => state.Countries);
-  const history = useHistory();
+  const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const [buttonEnabled, setButtonEnabled] = useState(false);
   const [input, setInput] = useState({
@@ -61,12 +61,12 @@ export default function ActivityCreate() {
     );
   }
   function handleCountrySelect(e) {
-    // if (input.countriesName.includes(e.target.value | "me rompi el qlo"))
-    //   //Si mi estado local input.temp... incluye el value, retorna una alerta
-    //   return alert("Ya seleccionaste este pais");
-    // const index = Countries.findIndex((object) => {
-    //   return object.name === e.target.value;
-    // });
+    if (input.countriesName.includes(e.target.value))
+      //Si mi estado local input.temp... incluye el value, retorna una alerta
+      return alert("Ya seleccionaste este pais");
+    const index = Countries.findIndex((object) => {
+      return object.name === e.target.value;
+    });
 
     setInput({
       ...input,
@@ -111,7 +111,7 @@ export default function ActivityCreate() {
       season: "",
       countriesName: [],
     });
-    history.push("/home");
+    navigate.push("/home");
   }
 
   return (

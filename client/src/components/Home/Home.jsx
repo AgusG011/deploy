@@ -14,8 +14,8 @@ import Cards from "../Cards/Cards";
 import Paginado from "../Paginado/Paginado";
 import Searchbar from "../Searchbar/Searchbar";
 import "./Home.css";
-import images from "../../assets/img/uwu.svg";
-import menu from "../../assets/img/menu.svg";
+import images from "../assets/img/uwu.svg";
+import menu from "../assets/img/menu.svg";
 
 export default function Home() {
   const dispatch = useDispatch(); // para despachar las actions
