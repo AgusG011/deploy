@@ -61,12 +61,12 @@ export default function ActivityCreate() {
     );
   }
   function handleCountrySelect(e) {
-    if (input.countriesName.includes(e.target.value | "me rompi el qlo"))
-      //Si mi estado local input.temp... incluye el value, retorna una alerta
-      return alert("Ya seleccionaste este pais");
-    const index = Countries.findIndex((object) => {
-      return object.name === e.target.value;
-    });
+    // if (input.countriesName.includes(e.target.value | "me rompi el qlo"))
+    //   //Si mi estado local input.temp... incluye el value, retorna una alerta
+    //   return alert("Ya seleccionaste este pais");
+    // const index = Countries.findIndex((object) => {
+    //   return object.name === e.target.value;
+    // });
 
     setInput({
       ...input,
