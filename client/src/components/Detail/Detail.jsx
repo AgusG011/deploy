@@ -15,7 +15,7 @@ export default function Detail(props) {
 
   useEffect(() => {
     axios
-      .get(`https://deploy-2237.vercel.app/countries/${id}`, {
+      .get(`https://deploy-production-4de2.up.railway.app/countries/${id}`, {
         method: "GET",
       })
       .then((response) => response.data)
