@@ -6,7 +6,7 @@ import Detail from "./components/Detail/Detail";
 import ActivityCreate from "./components/ActivityCreate/ActivityCreate";
 import axios from "axios";
 
-axios.defaults.baseURL = "deploy-production-4de2.up.railway.app/";
+axios.defaults.baseURL = "https://deploy-production-4de2.up.railway.app/";
 
 function App() {
   return (
