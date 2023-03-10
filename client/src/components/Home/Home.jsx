@@ -93,7 +93,7 @@ export default function Home() {
     <div className="dad">
       <nav className="navis">
         <div className="dad-nav">
-          <div onClick={() => window.location.reload()} className="nav-li">
+          <div className="nav-li">
             <img src={images} alt="logo" className="logis" />
             <h2 className="letras">Countries</h2>
           </div>
