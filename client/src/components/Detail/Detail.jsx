@@ -5,6 +5,7 @@ import { getDetail, ActivtyDelete } from "../../Redux/action";
 import { useEffect } from "react";
 import "./Detail.css";
 import axios from "axios";
+import Loader from "../Loader/Loader.jsx";
 // import {useHistory} from "react-router"
 
 export default function Detail(props) {
@@ -110,7 +111,7 @@ export default function Detail(props) {
           </div>
         </div>
       ) : (
-        <p>Cargando...</p>
+        <Loader />
       )}
     </div>
   );
