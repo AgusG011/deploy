@@ -3,6 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { postActivities, getCountries } from "../../Redux/action";
 import { useDispatch, useSelector } from "react-redux";
 import "./ActivityCreate.css";
+import toast, { Toaster } from "react-hot-toast";
+
+const notify = () => toast("Activity created!");
 
 export default function ActivityCreate() {
   const dispatch = useDispatch();
@@ -102,7 +105,6 @@ export default function ActivityCreate() {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(postActivities(input));
-    alert("Actividad creada!");
     console.log(input);
     setInput({
       name: "",
@@ -224,10 +226,16 @@ export default function ActivityCreate() {
                 )}
               </div>
             </div>
-
-            <button onClick={handleSubmit} class="sign-up" type="submit">
-              + Create
-            </button>
+            <div>
+              <button
+                onClick={handleSubmit && notify}
+                class="sign-up"
+                type="submit"
+              >
+                + Create
+              </button>
+              <Toaster />
+            </div>
           </div>
         </div>
       </div>
